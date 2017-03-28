@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<script src="js/pgb.js"></script>
+		<script src="cordova.js"></script>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body onload="init()">
+		
+		<!-- My app main page -->
+		<div data-role="page" id="pageone">
+		  <div data-role="header">
+			<h1>Atrakcje turystyczne</h1>
+		  </div>
+		  <div data-role="main" class="ui-content">
+		  <a href="#Pomorze" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Pomorze</a>
+		  	<a href="#Mazury" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade">Mazury</a>
+		  	<a href="#Tatry" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade">Tatry</a>
+
+		  	<div data-role="popup" id="Pomorze" class="photopopup" data-overlay-theme="a" data-corners="false" data-tolerance="30,15">
+		  		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/pomorze.jpg" alt="Photo landscape">
+		  	</div>
+		  	<div data-role="popup" id="Mazury" class="photopopup" data-overlay-theme="a" data-corners="false" data-tolerance="30,15">
+		  		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/mazury.jpg" alt="Photo portrait">
+		  	</div>
+		  	<div data-role="popup" id="Tatry" class="photopopup" data-overlay-theme="a" data-corners="false" data-tolerance="30,15">
+		  		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/tatry.jpg" alt="Photo landscape">
+		  	</div>
+		  	<div data-role="footer" data-position="fixed">
+			<h1>(c) Piotr Siekierski</h1>
+		  </div> 
+		</div> 
+		
+		<!-- Mobile device details page -->
+		<div data-role="page" id="masuria" data-dialog="true">
+			<div data-role="header" data-theme="a">
+				<h1>It's me</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<p id="deviceDetails">Place for device details ...</p>
+			</div>
+		</div>	
+
+		<div data-role="page" id="interests">
+			<div data-role="header" data-theme="a">
+				<h1>Moje zainteresowania</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<p>Firmy</p>
+				<p>Gry</p>
+				<p>Seriale</p>
+				<a href="#pageone" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-back">Powrót</a>
+			</div>
+		</div>	
+		
+	</body>
+</html>
